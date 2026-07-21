@@ -1,6 +1,6 @@
 ﻿namespace MatriculasAPI.Models;
 
-public class Inscricao
+public class Matricula
 {
     private string _status = "Ativo";
     public int Id { get; set; }
@@ -16,4 +16,8 @@ public class Inscricao
         } 
     }
     public DateOnly DataMatricula { get; set; }
+    public string EstudanteId { get; set; }
+    public Estudante Estudante { get; set; }
+    public int CursoId { get; set; }
+    public Curso Curso { get; set; }
 }
